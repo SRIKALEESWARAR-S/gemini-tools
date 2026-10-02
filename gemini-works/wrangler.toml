@@ -1,0 +1,12 @@
+name = "gemini-work"
+main = "worker.js"
+compatibility_date = "2024-01-01"
+
+# Refreshes trends every 6 hours
+[triggers]
+crons = ["0 */6 * * *"]
+
+# Links your KV Namespace
+kv_namespaces = [
+  { binding = "TRENDS_KV", id = "4744aa7c3fa94f319e3806127aa5dfd2" }
+]
